@@ -1,3 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="!authService.user"></app-navbar>
+<app-sidebar *ngIf="authService.user"></app-sidebar>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer *ngIf="!authService.user"></app-footer>
