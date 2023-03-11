@@ -65,14 +65,18 @@ public class SecurityConfiguration {
     return http.build();
   }
 
+//  @Bean
+//  public UserDetailsService users(UserService userService) {
+//    return userService;
+//  }
+
   @Bean
-  UserDetailsService users() {
+  public UserDetailsService users(PasswordEncoder passwordEncoder) {
     return new InMemoryUserDetailsManager(
-      User.withUsername("user")
-        .password(passwordEncoder().encode("pass"))
+      User.withUsername("username")
+        .password(passwordEncoder.encode("password"))
         .roles(Roles.USER)
-        .build()
-    );
+        .build());
   }
 
   @Bean
