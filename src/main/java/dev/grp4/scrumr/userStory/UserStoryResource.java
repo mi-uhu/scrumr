@@ -1,7 +1,7 @@
 package dev.grp4.scrumr.userStory;
 
 import dev.grp4.scrumr.auth.Roles;
-import dev.grp4.scrumr.general.Response;
+import dev.grp4.scrumr.http.Response;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ import static org.springframework.http.HttpStatus.*;
 @RequestMapping("/api/userStory")
 @RequiredArgsConstructor
 public class UserStoryResource {
-    private final UserStoryServiceImpl userStoryService;
+    private final UserStoryService userStoryService;
 
     @GetMapping("/list")
     public ResponseEntity<Response> getUserStories() {
