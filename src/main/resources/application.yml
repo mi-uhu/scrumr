@@ -1,5 +1,8 @@
 
 spring:
+  security:
+    user:
+      password: password
   datasource:
     password: password123!
     url: jdbc:mysql://localhost:3306/scrumr
@@ -12,3 +15,6 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
     show-sql: true
+
+
+
