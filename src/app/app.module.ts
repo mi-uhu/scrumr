@@ -13,9 +13,10 @@ import { BoardComponent } from './board/board.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserManagementComponent } from './user-management/user-management.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-    declarations: [AppComponent, NavbarComponent, WebPresenceComponent, FooterComponent, LoginComponent, SignupComponent, SidebarComponent, BoardComponent, ProjectsComponent, NotFoundComponent, UserManagementComponent],
+    declarations: [AppComponent, NavbarComponent, WebPresenceComponent, FooterComponent, LoginComponent, SignupComponent, SidebarComponent, BoardComponent, ProjectsComponent, NotFoundComponent, UserManagementComponent, HomeComponent],
     imports: [BrowserModule, RoutingModule],
     providers: [],
     bootstrap: [AppComponent],
