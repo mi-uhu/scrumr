@@ -1,4 +1,4 @@
-package dev.grp4.scrumr.model;
+package dev.grp4.scrumr.userStory;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

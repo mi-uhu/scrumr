@@ -1,4 +1,4 @@
-package dev.grp4.scrumr.model;
+package dev.grp4.scrumr.status;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

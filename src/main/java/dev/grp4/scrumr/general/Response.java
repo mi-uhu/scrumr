@@ -1,4 +1,4 @@
-package dev.grp4.scrumr.model;
+package dev.grp4.scrumr.general;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
