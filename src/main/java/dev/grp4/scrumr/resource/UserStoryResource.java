@@ -14,7 +14,7 @@ import static java.time.LocalDateTime.*;
 import static org.springframework.http.HttpStatus.*;
 
 @RestController
-@RequestMapping("/userStory")
+@RequestMapping("/api/userStory")
 @RequiredArgsConstructor
 public class UserStoryResource {
     private final UserStoryServiceImpl userStoryService;
@@ -58,7 +58,7 @@ public class UserStoryResource {
         );
     }
 
-    @DeleteMapping("/deleted/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Response> deleteUserStory(@PathVariable("id") long id) {
         return ResponseEntity.ok(
                 Response.builder()
