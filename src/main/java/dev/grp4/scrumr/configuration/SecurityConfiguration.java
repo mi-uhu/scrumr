@@ -71,12 +71,17 @@ public class SecurityConfiguration {
 //  }
 
   @Bean
-  public UserDetailsService users(PasswordEncoder passwordEncoder) {
+  UserDetailsService users(PasswordEncoder passwordEncoder) {
     return new InMemoryUserDetailsManager(
+      User.withUsername("user2")
+        .password(passwordEncoder.encode("pass123!"))
+        .roles(Roles.USER)
+        .build(),
       User.withUsername("username")
         .password(passwordEncoder.encode("password"))
         .roles(Roles.USER)
-        .build());
+        .build()
+    );
   }
 
   @Bean

@@ -18,7 +18,7 @@ import static org.springframework.http.HttpStatus.*;
 @RequestMapping("/api/userStory")
 @RequiredArgsConstructor
 public class UserStoryResource {
-    private final UserStoryServiceImpl userStoryService;
+    private final UserStoryService userStoryService;
 
     @GetMapping("/list")
     public ResponseEntity<Response> getUserStories() {
