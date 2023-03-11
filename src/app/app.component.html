@@ -1,3 +1,8 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-navbar *ngIf="!authService.user"></app-navbar>
+<div *ngIf="authService.user" class="sidebar-container">
+  <app-sidebar></app-sidebar>
+</div>
+<div [class.po-container]="authService.user">
+  <router-outlet></router-outlet>
+</div>
+<app-footer *ngIf="!authService.user"></app-footer>
