@@ -1,8 +1,8 @@
-package dev.grp4.scrumr.resource;
+package dev.grp4.scrumr.userStory;
 
-import dev.grp4.scrumr.model.Response;
-import dev.grp4.scrumr.model.UserStory;
-import dev.grp4.scrumr.service.impl.UserStoryServiceImpl;
+import dev.grp4.scrumr.auth.Roles;
+import dev.grp4.scrumr.general.Response;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +13,7 @@ import java.util.Map;
 import static java.time.LocalDateTime.*;
 import static org.springframework.http.HttpStatus.*;
 
+@RolesAllowed(Roles.USER)
 @RestController
 @RequestMapping("/api/userStory")
 @RequiredArgsConstructor

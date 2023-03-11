@@ -1,6 +1,4 @@
-package dev.grp4.scrumr.service;
-
-import dev.grp4.scrumr.model.UserStory;
+package dev.grp4.scrumr.userStory;
 
 import java.util.Collection;
 

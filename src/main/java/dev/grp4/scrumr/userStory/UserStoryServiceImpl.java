@@ -1,8 +1,5 @@
-package dev.grp4.scrumr.service.impl;
+package dev.grp4.scrumr.userStory;
 
-import dev.grp4.scrumr.model.UserStory;
-import dev.grp4.scrumr.repo.UserStoryRepo;
-import dev.grp4.scrumr.service.UserStoryService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
