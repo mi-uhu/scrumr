@@ -22,8 +22,9 @@ public class UserPopulator implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    populate("username", "password", Roles.USER);
+    populate("user", "pass", Roles.USER);
     populate("user2", "pass123!", Roles.USER);
+    populate("user3", "pass1234!", Roles.USER);
   }
 
   private void populate(String username, String password, String roles) {

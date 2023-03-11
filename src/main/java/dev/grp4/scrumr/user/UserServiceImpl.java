@@ -3,19 +3,18 @@ package dev.grp4.scrumr.user;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
-@Service
 @Transactional
 @Slf4j
 public class UserServiceImpl implements UserService {
 
   private final UserRepo userRepo;
 
-//  @Override
-  public User loadUserByUsername(String username) throws UsernameNotFoundException {
+  @Override
+  public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
     log.info( "Fetching user by username='{}'", username);
     return userRepo.findByUsername(username)
       .orElseThrow( () -> new UsernameNotFoundException("Username '" + username + "' not found.") );
